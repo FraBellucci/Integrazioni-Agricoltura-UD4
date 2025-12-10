@@ -206,49 +206,56 @@
             top: 2%;
             left: 35%;
             width: 30%;
-            height: 12%;
+            height: 8%;
         }
 
         .drop-zone-eyes {
-            top: 6%;
+            top: 10%;
             left: 35%;
             width: 30%;
-            height: 6%;
+            height: 8%;
         }
 
         .drop-zone-ears {
-            top: 8%;
-            left: 25%;
-            width: 50%;
+            top: 12%;
+            left: 8%;
+            width: 25%;
             height: 8%;
         }
 
         .drop-zone-torso {
-            top: 20%;
-            left: 25%;
-            width: 50%;
-            height: 28%;
+            top: 22%;
+            left: 30%;
+            width: 40%;
+            height: 22%;
         }
 
         .drop-zone-hands {
             top: 30%;
+            left: 70%;
+            width: 25%;
+            height: 25%;
+        }
+
+        .drop-zone-body {
+            top: 22%;
             left: 8%;
-            width: 84%;
-            height: 18%;
+            width: 22%;
+            height: 70%;
         }
 
         .drop-zone-legs {
-            top: 52%;
-            left: 28%;
-            width: 44%;
+            top: 50%;
+            left: 30%;
+            width: 40%;
             height: 28%;
         }
 
         .drop-zone-feet {
             top: 82%;
-            left: 25%;
-            width: 50%;
-            height: 16%;
+            left: 30%;
+            width: 40%;
+            height: 15%;
         }
 
         .dpi-item {
@@ -398,7 +405,7 @@
                 description: 'Operazioni con trattore in campo aperto',
                 requiredDPI: {
                     head: 'cappello',
-                    torso: 'tuta',
+                    body: 'tuta',
                     hands: 'guanti-lavoro',
                     feet: 'scarpe-s3'
                 }
@@ -414,12 +421,12 @@
             'guanti-antitaglio': { name: 'Guanti antitaglio', icon: '🧤', zone: 'hands' },
             'stivali-forestali': { name: 'Stivali forestali', icon: '🥾', zone: 'feet' },
             'cappello': { name: 'Cappello', icon: '🧢', zone: 'head' },
-            'tuta': { name: 'Tuta da lavoro', icon: '👔', zone: 'torso' },
+            'tuta': { name: 'Tuta da lavoro', icon: '👔', zone: 'body' },
             'guanti-lavoro': { name: 'Guanti da lavoro', icon: '🧤', zone: 'hands' },
             'scarpe-s3': { name: 'Scarpe S3', icon: '👞', zone: 'feet' },
             'occhiali-sole': { name: 'Occhiali da sole', icon: '🕶️', zone: 'eyes' },
             'mascherina': { name: 'Mascherina FFP3', icon: '😷', zone: 'face' },
-            'gilet': { name: 'Gilet alta visibilità', icon: '🦺', zone: 'torso' },
+            'gilet': { name: 'Gilet alta visibilità', icon: '🦺', zone: 'body' },
             'cintura': { name: 'Cintura sicurezza', icon: '🔗', zone: 'torso' },
             'ginocchiere': { name: 'Ginocchiere', icon: '🦵', zone: 'legs' }
         };
@@ -503,7 +510,7 @@
             });
 
             let dropZonesHTML = '';
-            const zones = ['head', 'eyes', 'ears', 'torso', 'hands', 'legs', 'feet'];
+            const zones = ['head', 'eyes', 'ears', 'torso', 'body', 'hands', 'legs', 'feet'];
             zones.forEach(zone => {
                 const isFilled = game.placedDPI[zone];
                 const placedDPI = isFilled ? dpiDatabase[game.placedDPI[zone]] : null;
